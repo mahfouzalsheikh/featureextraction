@@ -1,0 +1,27 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[dev-packages]
+
+[packages]
+numpy = "*"
+six = "*"
+opencv-python = "*"
+requests = "*"
+pillow = "*"
+fastkml = "*"
+shapely = "*"
+pyproj = "*"
+django = "*"
+"psycopg2-binary" = "*"
+"flake8" = "*"
+"flake8-docstrings" = "*"
+tifffile = "*"
+googlemaps = "*"
+tensorflow-gpu = "*"
+tensorflow-hub = "*"
+
+[requires]
+python_version = "3.7"

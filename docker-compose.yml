@@ -1,0 +1,26 @@
+version: '3.3'
+
+services:
+  db:
+    image: mdillon/postgis:10-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    ports:
+      - 5432:5432
+  web:
+    environment: 
+      GOOGLE_MAPS_KEY: ${GOOGLE_MAPS_KEY}
+      MAPBOX_TOKEN: ${MAPBOX_TOKEN}
+    build:
+      context: ./api/
+      dockerfile: Dockerfile
+    command: python /code/api/manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+
+volumes:
+  postgres_data:

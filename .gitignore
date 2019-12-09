@@ -1,0 +1,12 @@
+api/ml/bottleneck_data
+api/ml/model
+api/ml/training_images
+api/ml/test_images
+temp
+api/ml/scripts/data/
+api/ml/tensorboard_logs
+api/ml/retrained_graph*
+.vscode
+*.kml
+*.tiff
+.env

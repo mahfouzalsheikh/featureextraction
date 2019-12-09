@@ -1,0 +1,13 @@
+[flake8]
+ignore = W503, E129
+exclude =
+    .git,
+    __pycache__,
+    dist,
+    manage.py,
+    training.py
+    migrations,
+    snapshots
+max-complexity = 15
+max-line-length = 80
+inline-quotes = "
